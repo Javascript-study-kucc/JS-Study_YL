@@ -5,15 +5,25 @@ N이 주어졌을 때, N의 사이클의 길이를 구하는 프로그램을 작
 [입력]첫째 줄에 N이 주어진다. N은 0보다 크거나 같고, 99보다 작거나 같은 정수이다.
 [출력]첫째 줄에 N의 사이클 길이를 출력한다.
 */
-var input = Number(prompt(""));
-let count=0;
-let add = Math.floor(input/10)+input%10;
+// function makenew(arg) {
+//   let units = arg % 10; //일의 자릿수
+//   let tens = Math.floor(arg / 10); //십의 자릿수
+//   let added = units + tens; //자릿수 합=이전 수 십의 자리+일의 자리
+//   let newnum = units * 10 + (added % 10); //새로운 수=이전 수 일의 자리*10 + 자릿수 합의 일의 자리
+//   return newnum;
+// }
 
-do {
-    let new = (input%10)*10 + add%10;
-    count++;
+function getcycle(arg) {
+  let count = 0;
+  while (true) {
+    let units = arg % 10; //일의 자릿수
+    let tens = Math.floor(arg / 10); //십의 자릿수
+    let added = units + tens; //자릿수 합=이전 수 십의 자리+일의 자리
+    let newNum = units * 10 + (added % 10); //새로운 수=이전 수 일의 자리*10 + 자릿수 합의 일의 자리
+    count += 1; //사이클로 만들어진 숫자 != arg 이면 계속 함수를 돌려서 count 1씩 증가
+    if (newNum === arg) break;
+  }
+  return count;
 }
-while ( input != new ){
-    let new = (input%10)*10 + add%10;
-    count++;
-}console.log(count);
+
+alert(getcycle(1));
