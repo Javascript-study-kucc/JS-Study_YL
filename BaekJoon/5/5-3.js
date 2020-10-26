@@ -12,7 +12,8 @@ for (var i = 0; i < 3; i++) {
   input.push(prompt(""));
   multiplied *= Number(input[i]);
 }
-// 각각의 자리수를 별도로 인식하도록 10칸짜리 배열을 만들어 각 칸에
+// 각각의 자리수를 별도로 인식하도록 multiplied를 string으로 취급
+//10칸짜리 배열을 만들어 각 칸에 숫자별 횟수를 넣기
 let multiplyStr = String(multiplied);
 
 let count = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];

@@ -14,16 +14,18 @@ N이 주어졌을 때, N의 사이클의 길이를 구하는 프로그램을 작
 // }
 
 function getcycle(arg) {
-  let count = 0;
+    let count =0;
   while (true) {
     let units = arg % 10; //일의 자릿수
     let tens = Math.floor(arg / 10); //십의 자릿수
     let added = units + tens; //자릿수 합=이전 수 십의 자리+일의 자리
     let newNum = units * 10 + (added % 10); //새로운 수=이전 수 일의 자리*10 + 자릿수 합의 일의 자리
     count += 1; //사이클로 만들어진 숫자 != arg 이면 계속 함수를 돌려서 count 1씩 증가
+    console.log(count);
     if (newNum === arg) break;
   }
   return count;
 }
 
-alert(getcycle(1));
+getcycle(1);
+

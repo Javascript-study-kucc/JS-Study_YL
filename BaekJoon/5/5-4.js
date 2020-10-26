@@ -7,7 +7,7 @@ function remainerTypesCount(temp) {
   for (let i = 0; i < 10; i++) {
     remainer.push(temp[i] % 42);
   }
-  console.log([...new Set(remainer)].length); //[...nwe Set(array)]는 array의 중복제거
+  return [...new Set(remainer)].length; //[...nwe Set(array)]는 array의 중복제거
 }
 
 const input = [39, 40, 41, 42, 43, 44, 82, 83, 84, 85];
