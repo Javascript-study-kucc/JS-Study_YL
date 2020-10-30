@@ -1,3 +1,5 @@
+"use strict";
+
 function changeName(obj) {
   obj.name = "yilinthecoder";
 }
