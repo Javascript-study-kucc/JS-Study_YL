@@ -1,48 +1,48 @@
 "use strict";
 
-//Array
+// Array
 
-//1. Declaration
+// 1. Declaration
 const arr1 = new Array();
 const arr2 = [1, 2];
 
-//2. Index position
+// 2. Index position
 const fruits = ["apple", "banana"];
 console.log(fruits);
-console.log(fruits.length);
-console.log(fruits[0]);
-console.log(fruits[1]);
-console.log(fruits[2]);
-console.log(fruits[fruits.length - 1]);
+console.log(fruits.length); //2
+console.log(fuites[2]); //undefined
 
-//3. Looping over an array
-//print all fruits
-console.clear();
+// 3. Looping over an array
+// print all fruits
+// a. for
 for (let i = 0; i < fruits.length; i++) {
-  console.log(fruits[i]);
+  console.log(fruites[i]);
 }
 
+// b. for of
 for (let fruit of fruits) {
   console.log(fruit);
 }
 
 //c. forEach
-console.clear();
-fruits.forEach((fruit) => console.log(fruit));
+fruits.forEach((fruit, index) => console.log(fruit, index));
+// forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
+// /**
+//  * Calls a defined callback function on each element of an array, and returns an array that contains the results.
+//  * @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
+//  * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+//  */
 
-//4. Addition, deletion, copy
+//d. Addition, deletion, copy
 //push: add an item to the end
-fruits.push("strawberry", "orange");
-console.log(fruits);
+fruits.push("strawberry", "peach");
 
 //pop: remove an item from the end
-const popped = fruits.pop();
-fruits.pop();
-console.log(fruits);
+fruits.pop(); //['apple','banana','strawberry']
+fruits.pop(); //['apple','banana']
 
 //unshift: add an item to the beginning
-fruits.unshift("strawberry", "lemon");
-console.log(fruits);
+fruits.unshift("strawberry", "banana");
 
 //shift: remove an item from the beginning
 fruits.shift();
@@ -88,6 +88,7 @@ array.push("1", "2", "apple", 3, 4);
 console.log(array);
 console.log(typeof array.toString());
 
+// Array API
 // Q1. make a string out of an array
 {
   // const fruits = ['apple', 'banana', 'orange'];
