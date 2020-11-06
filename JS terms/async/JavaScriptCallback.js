@@ -3,7 +3,7 @@
 //JavaScript is synchronous.
 // Execute the code block in order after hoisting.
 // hoisting: default behavior of moving all declarations to the top of the current scope
-// (var, function declaration)
+// (ex. var, function declaration)
 console.log("1");
 
 //asyncronous

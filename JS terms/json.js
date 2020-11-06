@@ -1,8 +1,21 @@
-//JSON
-//JavaScript Object Notation
+//use HTTP to request data from server and transmit data to server
+//XML: one of markup language like HTML
+//AJAX(Asynchronous JavaScript And XML)
+//XHR(XMLHttpRequest): object
 
-//1. Object to JSON
+//fetch()API, XMLHttpReguest
+//and....JSON(JavaSCript Object Notion)
+// -simplest data interchange format
+// -lightweight text-based structure
+// -easy to read
+// -key-value pairs
+// -used for serialization and transmission of data between the network the network connection
+// -independent programming language and platform
+
+//1. serialize Object to JSON
+//use API JSON
 //stringfy(obj)
+// -boolean type
 let json = JSON.stringify(true);
 console.log(json);
 
@@ -30,9 +43,9 @@ json = JSON.stringify(rabbit, (key, value) => {
 });
 console.log(json);
 
-//Overloading
+//Overloading: same function name but differs on what parameters are passed and how they are passed
 
-//2. JSON to Object
+//2. deserialize JSON to object
 //parse(json)
 console.clear();
 json = JSON.stringify(rabbit);

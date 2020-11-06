@@ -42,38 +42,35 @@ fruits.pop(); //['apple','banana','strawberry']
 fruits.pop(); //['apple','banana']
 
 //unshift: add an item to the beginning
-fruits.unshift("strawberry", "banana");
+fruits.unshift("strawberry", "lemon"); //['strawberry','lemon','apple','banana']
 
 //shift: remove an item from the beginning
-fruits.shift();
-fruits.shift();
-console.log(fruits);
+fruits.shift(); //['lemon','apple','banana']
+fruits.shift(); //['apple','banana']
 
 //note! shift, unshift are slower than pop, push
-//bc have to move the whole data
+//bc move the original data
 
 //splice: remove an item by index position
-fruits.push("strawberry", "orange", "lemon");
-console.log(fruits);
-fruits.splice(1, 1, "apple", "watermelon");
-//erase one thing from index 1, and insert apple and watermelon
-console.log(fruits);
+fruits.push("strawberry", "peach", "lemon"); //['apple','banana','strawberry', 'peach','lemon']
+// splice(start: number, deleteCount?: number): string[]
+// The zero-based location in the array from which to start removing elements.
+// Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+fruits.splice(1, 1); //['apple','strawberry', 'peach','lemon']
+fruits.splice(1, 1, "greenapple", "watermelon"); //['apple','greenapple','watermelon','strawberry', 'peach','lemon']
 
 //combine two arrays
-const fruits2 = ["quince", "coconut"];
+const fruits2 = ["pear", "coconut"];
 const newFruits = fruits.concat(fruits2);
-console.log(newFruits);
 
 //5. Searching
 //indexOf: find the index
-console.clear();
-console.log(fruits);
-console.log(fruits.indexOf("apple"));
-console.log(fruits.indexOf("watermelon"));
+console.log(fruits.indexOf("apple")); //0
+console.log(fruits.indexOf("watermelon")); //2
 
 //includes
-console.log(fruits.includes("watermelon"));
-console.log(fruits.includes("peanut"));
+console.log(fruits.includes("watermelon")); //true
+console.log(fruits.includes("peanut")); //false
 console.log(fruits.indexOf("peanut"));
 
 //lastIndexOf
