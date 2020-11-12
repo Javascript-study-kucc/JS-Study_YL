@@ -14,6 +14,7 @@
 
 
 //### 1. Class declarations
+//this는 자기 자체 참조하는 변수
 class Person {
   //constructor
   constructor(name, age) {
@@ -54,14 +55,14 @@ class User {
   }
 
   get age() {
-    return this.age;
+    return this._age;
   }
 
   set age(value) {
     //if (value < 0) {
     //  throwError("age cannot be negative");
     //}
-    this.age = value < 0 ? 0 : value;
+    this._age = value < 0 ? 0 : value;
   }
 }
 
@@ -122,7 +123,7 @@ class Triangle extends Shpae{
 	//Method Overriding할 수 있음 재정의!
 	getArea(){
 	return (this.width *this.height) / 2;
-	}
+    }
 }
 
 const rectangle = new Rectangle(20, 20, 'blue');
