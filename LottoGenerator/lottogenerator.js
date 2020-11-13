@@ -22,5 +22,26 @@ function GetLotto() {
     }
     checkDup = true;
   }
+  //print(?) lotto number
   let lotto_text = document.getElementById("lotto_text");
+  lotto_text.value =
+    lotto[0] +
+    ", " +
+    lotto[1] +
+    ", " +
+    lotto[2] +
+    ", " +
+    lotto[3] +
+    ", " +
+    lotto[4] +
+    ", " +
+    lotto[5];
 }
+
+//<1113 Study>
+//innertext(text 요소)와 innerHTML(HTML 요소)
+//document.getElementById(`n{i}`).innerHTML = `${n1[i]}`
+//Set이 있는 경우에는 중복 X -집합 개념
+
+//DOM(문서 객체 모델)
+//API (web or XML page) = DOM + JS (scripting language)
