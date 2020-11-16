@@ -1,4 +1,12 @@
-function GetLotto() {
+const ball1 = document.getElementById("num1"),
+  ball2 = document.getElementById("num2"),
+  ball3 = document.getElementById("num3"),
+  ball4 = document.getElementById("num4"),
+  ball5 = document.getElementById("num5"),
+  ball6 = document.getElementById("num6"),
+  ball7 = document.getElementById("bonus_num");
+
+function get_lottonum() {
   //save 6 arrays to lotto
   let lotto = new Array(6);
   //how many lotto numbers
@@ -22,20 +30,19 @@ function GetLotto() {
     }
     checkDup = true;
   }
-  //print(?) lotto number
-  let lotto_text = document.getElementById("lotto_text");
-  lotto_text.value =
-    lotto[0] +
-    ", " +
-    lotto[1] +
-    ", " +
-    lotto[2] +
-    ", " +
-    lotto[3] +
-    ", " +
-    lotto[4] +
-    ", " +
-    lotto[5];
+  //generate lotto number by assigning lotto[]
+  ball1.innerHTML = lotto[0];
+  ball2.innerHTML = lotto[1];
+  ball3.innerHTML = lotto[2];
+  ball4.innerHTML = lotto[3];
+  ball5.innerHTML = lotto[4];
+  ball6.innerHTML = lotto[5];
+  ball7.innerHTML = lotto[6];
+  return lotto;
+
+  document
+    .getElementById("gen_button")
+    .addEventListener("click", get_lottonum());
 }
 
 //<1113 Study>

@@ -8,20 +8,25 @@
   </head>
   <body>
     <h1>lotto number generator</h1>
-    <div>
-      <input type="text" readonly="" id="lotto_text" />
+    <div class="content">
+      <div class="ball" id="num1"></div>
+      <div class="ball" id="num2"></div>
+      <div class="ball" id="num3"></div>
+      <div class="ball" id="num4"></div>
+      <div class="ball" id="num5"></div>
+      <div class="ball" id="num6"></div>
+      <div class="ball" id="plus"></div>
+      <div class="ball" id="bonus_num"></div>
     </div>
-
-    <div>
-      <input
-        type="button"
-        value="로또번호생성"
-        id="generate_button"
-        onclick="GetLotto()"
-      />
-    </div>
-    <div></div>
+    <div
+      type="button"
+      value="생성"
+      id="gen_button"
+      onclick="get_lottonum()"
+    ></div>
   </body>
 </html>
 
 <!-- 공을 하나하나 뽑고 싶으면 div로 하나하나 칸 만들어서 뽑기 -->
+<!-- getElementbyId("lotto_text").addEventListener("click", GetLotto(){
+}) -->
