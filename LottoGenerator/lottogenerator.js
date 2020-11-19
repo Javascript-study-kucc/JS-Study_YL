@@ -31,6 +31,10 @@ function get_lottonum() {
     checkDup = true;
   }
   //generate lotto number by assigning lotto[]
+  document
+    .getElementById("gen_button")
+    .addEventListener("click", get_lottonum());
+
   ball1.innerHTML = lotto[0];
   ball2.innerHTML = lotto[1];
   ball3.innerHTML = lotto[2];
@@ -39,10 +43,6 @@ function get_lottonum() {
   ball6.innerHTML = lotto[5];
   ball7.innerHTML = lotto[6];
   return lotto;
-
-  document
-    .getElementById("gen_button")
-    .addEventListener("click", get_lottonum());
 }
 
 //<1113 Study>
