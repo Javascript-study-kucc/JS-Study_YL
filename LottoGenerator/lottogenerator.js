@@ -31,9 +31,6 @@ function get_lottonum() {
     checkDup = true;
   }
   //generate lotto number by assigning lotto[]
-  document
-    .getElementById("gen_button")
-    .addEventListener("click", get_lottonum());
 
   ball1.innerHTML = lotto[0];
   ball2.innerHTML = lotto[1];
