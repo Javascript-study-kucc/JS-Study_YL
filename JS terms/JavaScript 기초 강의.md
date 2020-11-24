@@ -20,8 +20,16 @@ editor에 `node 파일이름.js`를 치면 브라우저 없이 실행 가능
 
 ### 4. `<head>` + `defer`
 - HTML parsing하다가 defer보고 fetching js, page가 다 준비되면 executing js
+
 - 가장 좋은 옵션
+
 - 정의한 script 순서에 맞게 download 먼저 된 javascript를 실행
+
+- \- async 속성이 명시된 경우 : 브라우저가 페이지를 파싱되는 동안에도 스크립트가 실행됨.
+
+  \- async 속성은 명시되어 있지 않고 defer 속성만 명시된 경우 : 브라우저가 페이지의 파싱을 모두 끝내면 스크립트가 실행됨.
+
+  \- async 속성과 defer 속성이 모두 명시되어 있지 않은 경우 : 브라우저가 페이지를 파싱하기 전에 스크립트를 가져와 바로 실행시킴.
 
 
 ## ` 'use strict';`
