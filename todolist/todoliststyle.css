@@ -1,5 +1,13 @@
+/* `*` refers to total selector 
+include padding and border in total elemnts */
+* {
+  box-sizing: border-box;
+}
 .title {
   font-family: "Castoro", serif;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
 }
 #input {
 }
