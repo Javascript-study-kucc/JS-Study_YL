@@ -9,7 +9,10 @@ include padding and border in total elemnts */
   color: white;
   text-align: center;
 }
-#input {
+#inputText {
+  border: 1px;
 }
 #button {
+  background-color: cadetblue;
+  border: 1px;
 }

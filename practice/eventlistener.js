@@ -14,9 +14,9 @@ function changebgcolor() {
 
 // myP.onclick = function(){myDiv.style.background = "lightblue"};
 
-myP.addEventListener("click", changeText, true);
+myP.addEventListener("click", changeText, false);
 
-myDiv.addEventListener("click", changeText2, true);
+myDiv.addEventListener("click", changeText2, false);
 
 myP.addEventListener("mouseover", changebordercolor);
 

@@ -1,18 +1,28 @@
 //change JSON data to JS Object form
 
-let button = document.getElementById('button');
-let input = document.getElementById('input');
-let list = docoment.getElementById('list');
+let buttonAdd = document.getElementById('button');
+let todolist = docoment.getElementById('todolist');
 let done = document.getElementById('done');
 
-button.addEventListener('click', addNewTodo);
-//when button is clicked, add it to the list
-function addNewTodo{
-    //make li element in temp
-    let temp = document.createElement('li');
-    //put input data to li
-    temp.innerHTML = input.value;
-    //add input to list
-    list.appendChild(temp);
+//function that appends new todo item to Array
+function addNewItem(list, itemText){
+    //document.createElement() method creates and returns certain tag's HTML element
+    let listItem = document.createElement('li');
+    listItem.innerText = itemText;
+    todolist.appendChild(listItem);
 }
+
+buttonAdd.addEventListener('click', addNewTodo());
+
+//function that gets new todo by user input and adds it to list when clicked
+function addNewTodo{
+    let inputText = document.getElementById('inputText');
+    let itemText = inputText.value;
+
+   //blank
+    if(!itemText || itemText === "" || itemText ===" ") return false;
+
+    addNewItem(document.getElementById('todolist'),itemText);
+}
+
 
